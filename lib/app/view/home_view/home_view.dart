@@ -35,7 +35,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
 
   void onStoryItemTap(reactpoint, index) {
     setState(() => rect = reactpoint);
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       setState(() =>
           rect = rect!.inflate(1.3 * MediaQuery.of(context).size.longestSide));
       storyAnimationController!.forward();

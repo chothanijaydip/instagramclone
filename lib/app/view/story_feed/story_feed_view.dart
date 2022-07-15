@@ -2,9 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagramclone/app/app_data/story_data.dart';
@@ -40,7 +38,7 @@ class _StoryFeedViewState extends State<StoryFeedView>
     _pageController = PageController();
     _childpageController = PageController();
     _animationController = AnimationController(vsync: this);
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       _pageController!.addListener(_listener);
     });
     final Story firstStory = widget.stories.first;
